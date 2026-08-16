@@ -64,6 +64,21 @@ const siteContent = {
     description: 'Muy pronto vamos a subir las fotos del lugar donde festejamos.',
     photos: [],
   },
+
+  credits: {
+    kicker: 'Detrás de esta invitación',
+    nameLines: ['Joel Miguel', 'Serrudo'],
+    role: 'Desarrollador',
+    location: 'Salta, Argentina',
+    bio: 'Si querés una invitación así para tu propio evento, podes escribirme.',
+    links: {
+      github: 'https://github.com/senkuch4n',
+      linkedin: 'https://www.linkedin.com/in/joel-serrudo-463731234/',
+      email: 'joelserrudo@gmail.com',
+      phone: '+5493875043021',
+      phoneLabel: '+54 9 387 504 3021',
+    },
+  },
 };
 
 export default siteContent;
