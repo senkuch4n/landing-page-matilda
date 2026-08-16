@@ -19,7 +19,7 @@ const siteContent = {
   bottom: {
     kicker: 'Bienvenidos',
     copy:
-      'Los invito a celebrar mis quince años. [Agregá acá la fecha, el horario y el lugar del evento].',
+      'Los invito a celebrar mis quince años. [fecha, el horario y el lugar del evento].',
     primaryCta: {
       label: 'Confirmar asistencia',
       href: '#rsvp',
