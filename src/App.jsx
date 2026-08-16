@@ -4,6 +4,8 @@ import Hero from './components/Hero';
 import Countdown from './components/Countdown';
 import RsvpForm from './components/RsvpForm';
 import VenueGallery from './components/VenueGallery';
+import DeveloperCredit from './components/DeveloperCredit';
+import SiteFooter from './components/SiteFooter';
 import siteContent from './content/siteContent';
 import useSmoothScroll from './hooks/useSmoothScroll';
 import './App.css';
@@ -19,6 +21,8 @@ function App() {
       <Countdown event={siteContent.event} />
       <RsvpForm content={siteContent.rsvp} />
       <VenueGallery content={siteContent.gallery} />
+      <DeveloperCredit content={siteContent.credits} />
+      <SiteFooter event={siteContent.event} credits={siteContent.credits} />
     </div>
   );
 }

@@ -3,6 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": {
+    "name": "Joel Miguel Serrudo",
+    "email": "joelserrudo@gmail.com",
+    "url": "https://github.com/senkuch4n"
+  },
+  "contact": {
+    "phone": "+54 9 387 5043021",
+    "linkedin": "https://www.linkedin.com/in/joel-serrudo-463731234/",
+    "github": "https://github.com/senkuch4n"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
