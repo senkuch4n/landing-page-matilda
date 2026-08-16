@@ -1,0 +1,58 @@
+.cta-button {
+  position: relative;
+  display: inline-flex;
+  align-items: stretch;
+  height: 48px;
+  padding: 0 24px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  margin: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button__label {
+  display: flex;
+  align-items: center;
+}
+
+/* Primary: filled white button with dark text */
+.cta-button--primary {
+  background: #ffffff;
+  color: #0a0a0a;
+  padding-right: 56px;
+}
+
+.cta-button--primary .cta-button__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee8fe;
+  color: #0a0a0a;
+  font-size: 14px;
+}
+
+/* Secondary: outlined / transparent button */
+.cta-button--secondary {
+  background: transparent;
+  color: #ffffff;
+}
+
+.cta-button:hover .hud-corner {
+  border-color: #ffffff;
+}
+
+.cta-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

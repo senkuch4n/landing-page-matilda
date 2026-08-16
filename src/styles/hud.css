@@ -1,0 +1,68 @@
+/* Sistema visual compartido: esquinas tipo HUD, paneles de vidrio
+   esmerilado y kickers monoespaciados. Usado por botones, countdown,
+   formulario y galería para mantener un mismo lenguaje visual. */
+
+.hud-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hud-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+
+.hud-corner--tl {
+  top: -6px;
+  left: -6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.85);
+  border-left: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.hud-corner--br {
+  bottom: -6px;
+  right: -6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  border-right: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.hud-corners--dim .hud-corner {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hud-panel {
+  position: relative;
+  background: rgba(12, 6, 24, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hud-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.hud-kicker::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.hud-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin: 0;
+}

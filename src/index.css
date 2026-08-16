@@ -1,0 +1,33 @@
+@import './styles/hud.css';
+
+:root {
+  --font-sans: 'Inter', Helvetica, Arial, sans-serif;
+  --font-display: 'Archivo Expanded', 'Archivo', Helvetica, Arial, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, Consolas, monospace;
+
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+}

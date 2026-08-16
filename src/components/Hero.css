@@ -1,0 +1,140 @@
+.hero {
+  position: relative;
+  z-index: 2;
+  margin-top: 96px;
+  padding: 0 48px 48px;
+  min-height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 64px;
+}
+
+.hero__side-note {
+  position: absolute;
+  right: 48px;
+  bottom: calc(100% - 40px);
+  max-width: 240px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: left;
+  margin: 0;
+  animation: hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.5s;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 8vw, 114px);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero__title-line {
+  display: block;
+  animation: hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero__title-line:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.hero__title-line:nth-child(2) {
+  padding-left: 2.3em;
+  animation-delay: 0.22s;
+}
+
+.hero__title-line:nth-child(3) {
+  padding-left: 3.8em;
+  animation-delay: 0.34s;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  animation: hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.5s;
+}
+
+.hero__intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 480px;
+}
+
+.hero__kicker {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.hero__kicker-divider {
+  width: 4px;
+  height: 4px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+}
+
+.hero__copy {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 0 20px 32px;
+    gap: 40px;
+  }
+
+  .hero__side-note {
+    position: static;
+    max-width: none;
+    margin-bottom: 24px;
+  }
+
+  .hero__intro {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero__kicker-divider {
+    display: none;
+  }
+}
