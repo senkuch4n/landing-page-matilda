@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 64px;
+  gap: 40px;
 }
 
 .hero__side-note {
@@ -20,7 +20,7 @@
   line-height: 1.6;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--color-text-faint);
   text-align: left;
   margin: 0;
   animation: hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -30,12 +30,12 @@
 .hero__title {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 500;
   font-size: clamp(48px, 8vw, 114px);
-  line-height: 0.92;
-  letter-spacing: -0.02em;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .hero__title-line {
@@ -48,12 +48,12 @@
 }
 
 .hero__title-line:nth-child(2) {
-  padding-left: 2.3em;
+  padding-left: 1.15em;
   animation-delay: 0.22s;
 }
 
 .hero__title-line:nth-child(3) {
-  padding-left: 3.8em;
+  padding-left: 2.1em;
   animation-delay: 0.34s;
 }
 
@@ -70,13 +70,65 @@
   }
 }
 
+.hero__countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  animation: hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.42s;
+}
+
+.hero__countdown-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: capitalize;
+  color: white;
+  margin: 0;
+  background-color: var(--color-accent);
+  padding: .5rem;
+}
+
+.hero__countdown-units {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero__countdown-unit {
+  position: relative;
+  width: 76px;
+  padding: 14px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero__countdown-value {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.hero__countdown-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
 .hero__bottom {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
   animation: hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: 0.5s;
+  animation-delay: 0.58s;
 }
 
 .hero__intro {
@@ -90,7 +142,7 @@
   font-family: var(--font-sans);
   font-size: 16px;
   font-weight: 300;
-  color: #ffffff;
+  color: var(--color-text);
   white-space: nowrap;
   padding-top: 2px;
 }
@@ -99,7 +151,7 @@
   width: 4px;
   height: 4px;
   margin-top: 10px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--color-accent);
   flex-shrink: 0;
 }
 
@@ -108,7 +160,7 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text-muted);
   margin: 0;
 }
 

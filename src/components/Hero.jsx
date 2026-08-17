@@ -1,9 +1,36 @@
 import CtaButton from './CtaButton';
+import HudCorners from './HudCorners';
+import useCountdown from '../hooks/useCountdown';
 import './Hero.css';
 
-function Hero({ hero, bottom }) {
+function pad(n) {
+  return String(n).padStart(2, '0');
+}
+
+function Hero({ hero, bottom, event }) {
+  const { timeLeft, targetDate } = useCountdown(event.dateISO);
+
+  const formattedDate = targetDate.toLocaleDateString('es-AR', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+  const startTime = targetDate.toLocaleTimeString('es-AR', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  });
+
+  const units = [
+    { value: timeLeft.days, label: event.labels.days },
+    { value: timeLeft.hours, label: event.labels.hours },
+    { value: timeLeft.minutes, label: event.labels.minutes },
+    { value: timeLeft.seconds, label: event.labels.seconds },
+  ];
+
   return (
-    <main className="hero">
+    <main className="hero" id="hero">
       <p className="hero__side-note">{hero.sideNote}</p>
 
       <h1 className="hero__title">
@@ -13,6 +40,27 @@ function Hero({ hero, bottom }) {
           </span>
         ))}
       </h1>
+
+
+      <div className="hero__countdown" id="countdown">
+        <span className="hud-kicker">{event.kicker}</span>
+        <p className="hero__countdown-date">
+          {formattedDate} · {startTime}
+          {event.endTimeLabel ? ` – ${event.endTimeLabel} hs` : ' hs'}
+        </p>
+
+        <div className="hero__countdown-units">
+          {units.map((unit) => (
+            <div className="hero__countdown-unit hud-panel" key={unit.label}>
+              <HudCorners />
+              <span className="hero__countdown-value">
+                {timeLeft.total > 0 ? pad(unit.value) : '00'}
+              </span>
+              <span className="hero__countdown-label">{unit.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
       <div className="hero__bottom">
         <div className="hero__intro">
