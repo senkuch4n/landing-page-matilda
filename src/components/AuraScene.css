@@ -2,13 +2,13 @@
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: #000000;
+  background: #ffffff;
   background-image: radial-gradient(
     circle at 62% 48%,
-    rgba(122, 58, 219, 0.35) 0%,
-    rgba(94, 40, 178, 0.22) 30%,
-    rgba(40, 12, 66, 0.12) 55%,
-    rgba(0, 0, 0, 0) 75%
+    rgba(156, 123, 123, 0.22) 0%,
+    rgba(180, 150, 140, 0.14) 30%,
+    rgba(220, 200, 190, 0.08) 55%,
+    rgba(255, 255, 255, 0) 75%
   );
 }
 

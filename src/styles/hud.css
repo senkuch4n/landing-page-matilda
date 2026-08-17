@@ -17,27 +17,27 @@
 .hud-corner--tl {
   top: -6px;
   left: -6px;
-  border-top: 1px solid rgba(255, 255, 255, 0.85);
-  border-left: 1px solid rgba(255, 255, 255, 0.85);
+  border-top: 1px solid rgba(28, 20, 18, 0.55);
+  border-left: 1px solid rgba(28, 20, 18, 0.55);
 }
 
 .hud-corner--br {
   bottom: -6px;
   right: -6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
-  border-right: 1px solid rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(28, 20, 18, 0.55);
+  border-right: 1px solid rgba(28, 20, 18, 0.55);
 }
 
 .hud-corners--dim .hud-corner {
-  border-color: rgba(255, 255, 255, 0.35);
+  border-color: rgba(28, 20, 18, 0.25);
 }
 
 .hud-panel {
   position: relative;
-  background: rgba(12, 6, 24, 0.55);
+  background: var(--color-surface);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-surface-border);
 }
 
 .hud-kicker {
@@ -48,21 +48,30 @@
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--color-accent-dark);
 }
 
 .hud-kicker::before {
   content: '';
   width: 16px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--color-accent);
 }
 
 .hud-heading {
   font-family: var(--font-display);
   font-weight: 400;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-text);
   letter-spacing: -0.01em;
   margin: 0;
+}
+
+/* Secciones de fondo plano: tapan la escena WebGL fija detrás para
+   alternar ritmo visual con las secciones "animadas" (hero, venue). */
+.flat-section {
+  position: relative;
+  background: linear-gradient(180deg, #f8f4ef 0%, #f1e9e1 100%);
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
 }

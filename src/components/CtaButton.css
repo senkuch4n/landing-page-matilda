@@ -21,10 +21,10 @@
   align-items: center;
 }
 
-/* Primary: filled white button with dark text */
+/* Primary: filled mauve button with white text */
 .cta-button--primary {
-  background: #ffffff;
-  color: #0a0a0a;
+  background: var(--color-accent);
+  color: #ffffff;
   padding-right: 56px;
 }
 
@@ -37,19 +37,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #eee8fe;
-  color: #0a0a0a;
+  background: var(--color-accent-dark);
+  color: #ffffff;
   font-size: 14px;
 }
 
 /* Secondary: outlined / transparent button */
 .cta-button--secondary {
   background: transparent;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .cta-button:hover .hud-corner {
-  border-color: #ffffff;
+  border-color: var(--color-accent-dark);
 }
 
 .cta-button:disabled {

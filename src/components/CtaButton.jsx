@@ -9,6 +9,7 @@ function CtaButton({
   type = 'button',
   onClick,
   disabled = false,
+  external = false,
 }) {
   const className = `cta-button cta-button--${variant}`;
   const content = (
@@ -25,7 +26,12 @@ function CtaButton({
 
   if (href) {
     return (
-      <a className={className} href={href}>
+      <a
+        className={className}
+        href={href}
+        target={external ? '_blank' : undefined}
+        rel={external ? 'noreferrer' : undefined}
+      >
         {content}
       </a>
     );

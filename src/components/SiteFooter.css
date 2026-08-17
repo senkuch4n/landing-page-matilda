@@ -7,12 +7,12 @@
   justify-content: space-between;
   gap: 12px 24px;
   padding: 20px 48px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-divider);
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--color-text-faint);
 }
 
 .site-footer__item--center {
@@ -26,13 +26,13 @@
 }
 
 .site-footer__link {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-muted);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .site-footer__link:hover {
-  color: #f3d9ff;
+  color: var(--color-accent-dark);
 }
 
 @media (max-width: 720px) {
