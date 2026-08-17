@@ -60,6 +60,12 @@
   border: 0;
 }
 
+@media (max-width: 900px) {
+  .venue {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 560px) {
   .venue {
     padding: 40px 20px;

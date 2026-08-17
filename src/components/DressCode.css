@@ -35,6 +35,12 @@
   margin: 4px 0 0;
 }
 
+@media (max-width: 900px) {
+  .dress-code {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 560px) {
   .dress-code {
     padding: 40px 20px;

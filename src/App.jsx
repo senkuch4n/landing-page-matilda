@@ -12,16 +12,17 @@ import './App.css';
 
 function App() {
   useSmoothScroll();
+  const { familyPhotos } = siteContent;
 
   return (
     <div className="page">
       <AuraScene />
       <Header brand={siteContent.brand} brandBadge={siteContent.brandBadge} {...siteContent.header} />
-      <Hero hero={siteContent.hero} bottom={siteContent.bottom} event={siteContent.event} />
-      <VenueRoute venue={siteContent.venue} />
-      <DressCode content={siteContent.dressCode} />
-      <RsvpForm content={siteContent.rsvp} songSearch={siteContent.songSearch} />
-      <DeveloperCredit content={siteContent.credits} />
+      <Hero hero={siteContent.hero} bottom={siteContent.bottom} event={siteContent.event} familyPhotoSrc={familyPhotos.hero} />
+      <VenueRoute venue={siteContent.venue} familyPhotoSrc={familyPhotos.venue} />
+      <DressCode content={siteContent.dressCode} familyPhotoSrc={familyPhotos.dressCode} />
+      <RsvpForm content={siteContent.rsvp} songSearch={siteContent.songSearch} familyPhotoSrc={familyPhotos.rsvp} />
+      <DeveloperCredit content={siteContent.credits} familyPhotoSrc={familyPhotos.credits} />
       <SiteFooter event={siteContent.event} credits={siteContent.credits} />
     </div>
   );

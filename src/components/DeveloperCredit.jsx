@@ -1,12 +1,15 @@
+import FamilyPhoto from './FamilyPhoto';
 import useScrollReveal from '../hooks/useScrollReveal';
 import './DeveloperCredit.css';
 
-function DeveloperCredit({ content }) {
+function DeveloperCredit({ content, familyPhotoSrc }) {
   const ref = useScrollReveal();
   const { links } = content;
 
   return (
     <section className="credit" id="credit">
+      {familyPhotoSrc && <FamilyPhoto src={familyPhotoSrc} corner="bottom-right" rotate={-5} size={160} />}
+
       <div ref={ref} className="credit__inner">
         <span className="hud-kicker">{content.kicker}</span>
 
