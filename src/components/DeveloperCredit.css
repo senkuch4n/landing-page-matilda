@@ -93,6 +93,12 @@
   transform: scaleX(1);
 }
 
+@media (max-width: 900px) {
+  .credit {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 720px) {
   .credit {
     padding: 40px 20px 80px;

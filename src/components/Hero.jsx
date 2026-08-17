@@ -1,5 +1,6 @@
 import CtaButton from './CtaButton';
 import HudCorners from './HudCorners';
+import FamilyPhoto from './FamilyPhoto';
 import useCountdown from '../hooks/useCountdown';
 import './Hero.css';
 
@@ -7,7 +8,7 @@ function pad(n) {
   return String(n).padStart(2, '0');
 }
 
-function Hero({ hero, bottom, event }) {
+function Hero({ hero, bottom, event, familyPhotoSrc }) {
   const { timeLeft, targetDate } = useCountdown(event.dateISO);
 
   const formattedDate = targetDate.toLocaleDateString('es-AR', {
@@ -31,6 +32,8 @@ function Hero({ hero, bottom, event }) {
 
   return (
     <main className="hero" id="hero">
+      {familyPhotoSrc && <FamilyPhoto src={familyPhotoSrc} corner="bottom-right" rotate={-7} size={170} />}
+
       <p className="hero__side-note">{hero.sideNote}</p>
 
       <h1 className="hero__title">

@@ -1,0 +1,55 @@
+.family-photo {
+  position: absolute;
+  z-index: 1;
+  width: var(--photo-size, 170px);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  opacity: 0.5;
+  border: 6px solid #fff;
+  box-shadow: 0 24px 40px -22px rgba(28, 20, 18, 0.4);
+  transform: rotate(var(--photo-rotate, -6deg));
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.family-photo--top-left {
+  top: 8%;
+  left: 4%;
+}
+
+.family-photo--top-right {
+  top: 8%;
+  right: 4%;
+}
+
+.family-photo--bottom-left {
+  bottom: 8%;
+  left: 4%;
+}
+
+.family-photo--bottom-right {
+  bottom: 8%;
+  right: 4%;
+}
+
+.family-photo--mid-left {
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%) rotate(var(--photo-rotate, -6deg));
+}
+
+/* En mobile no hay margen lateral para "flotar" sobre el texto sin
+   taparlo, así que en vez de superponerse pasan a formar parte del
+   flujo normal: quedan como una fotito centrada arriba del contenido
+   de la sección (el padre pasa a flex-direction:column, ver cada
+   componente). Sigue rotada y semitransparente, pero ya no puede
+   pisar nada porque empuja el resto del contenido hacia abajo. */
+@media (max-width: 900px) {
+  .family-photo {
+    position: static;
+    display: block;
+    width: 110px;
+    margin: 0 auto 20px;
+    transform: rotate(var(--photo-rotate, -6deg));
+  }
+}

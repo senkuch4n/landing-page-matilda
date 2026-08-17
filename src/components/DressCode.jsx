@@ -1,11 +1,14 @@
+import FamilyPhoto from './FamilyPhoto';
 import useScrollReveal from '../hooks/useScrollReveal';
 import './DressCode.css';
 
-function DressCode({ content }) {
+function DressCode({ content, familyPhotoSrc }) {
   const ref = useScrollReveal();
 
   return (
     <section className="dress-code" id="dress-code">
+      {familyPhotoSrc && <FamilyPhoto src={familyPhotoSrc} corner="mid-left" rotate={-8} size={150} />}
+
       <div ref={ref} className="dress-code__inner">
         <svg className="dress-code__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
           <path

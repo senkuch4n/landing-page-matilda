@@ -103,6 +103,17 @@ const siteContent = {
   },
 
 
+  // Fotos de Matilda y su familia, usadas como collage decorativo
+  // semitransparente repartido por distintas secciones de la página
+  // (sólo se ven en pantallas anchas, en mobile se ocultan).
+  familyPhotos: {
+    hero: '/photos_family/foto_4.jpeg',
+    venue: '/photos_family/foto_3.jpeg',
+    dressCode: '/photos_family/foto_2.jpeg',
+    rsvp: '/photos_family/foto_1.jpeg',
+    credits: '/photos_family/foto_5.jpeg',
+  },
+
   credits: {
     kicker: 'Detrás de esta invitación',
     nameLines: ['Joel Miguel', 'Serrudo'],

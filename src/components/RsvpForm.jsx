@@ -2,6 +2,7 @@ import { useState } from 'react';
 import CtaButton from './CtaButton';
 import HudCorners from './HudCorners';
 import SongSearch from './SongSearch';
+import FamilyPhoto from './FamilyPhoto';
 import useScrollReveal from '../hooks/useScrollReveal';
 import './RsvpForm.css';
 
@@ -39,7 +40,7 @@ async function submitRsvp(guests) {
   });
 }
 
-function RsvpForm({ content, songSearch }) {
+function RsvpForm({ content, songSearch, familyPhotoSrc }) {
   const ref = useScrollReveal();
   const [guests, setGuests] = useState([makeGuest()]);
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
@@ -75,6 +76,8 @@ function RsvpForm({ content, songSearch }) {
 
   return (
     <section className="rsvp flat-section" id="rsvp">
+      {familyPhotoSrc && <FamilyPhoto src={familyPhotoSrc} corner="top-right" rotate={7} size={160} />}
+
       <div ref={ref} className="rsvp__inner">
         <span className="hud-kicker">{content.kicker}</span>
         <h2 className="hud-heading rsvp__heading">{content.heading}</h2>
