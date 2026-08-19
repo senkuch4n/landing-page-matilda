@@ -17,19 +17,19 @@
 .hud-corner--tl {
   top: -6px;
   left: -6px;
-  border-top: 1px solid rgba(28, 20, 18, 0.55);
-  border-left: 1px solid rgba(28, 20, 18, 0.55);
+  border-top: 1px solid rgba(20, 40, 63, 0.55);
+  border-left: 1px solid rgba(20, 40, 63, 0.55);
 }
 
 .hud-corner--br {
   bottom: -6px;
   right: -6px;
-  border-bottom: 1px solid rgba(28, 20, 18, 0.55);
-  border-right: 1px solid rgba(28, 20, 18, 0.55);
+  border-bottom: 1px solid rgba(20, 40, 63, 0.55);
+  border-right: 1px solid rgba(20, 40, 63, 0.55);
 }
 
 .hud-corners--dim .hud-corner {
-  border-color: rgba(28, 20, 18, 0.25);
+  border-color: rgba(20, 40, 63, 0.25);
 }
 
 .hud-panel {
@@ -71,7 +71,7 @@
    alternar ritmo visual con las secciones "animadas" (hero, venue). */
 .flat-section {
   position: relative;
-  background: linear-gradient(180deg, #f8f4ef 0%, #f1e9e1 100%);
+  background: linear-gradient(180deg, #f4f8fb 0%, #e7eff5 100%);
   border-top: 1px solid var(--color-divider);
   border-bottom: 1px solid var(--color-divider);
 }

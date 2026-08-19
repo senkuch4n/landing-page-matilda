@@ -41,7 +41,7 @@ function VenueTour3D({ photos = [] }) {
     const planeWidth = 1.9;
     const planeHeight = 1.3;
     const frameGeometry = buildFrameEdges(planeWidth + 0.06, planeHeight + 0.06);
-    const frameMaterial = new THREE.LineBasicMaterial({ color: '#9c7b7b', transparent: true, opacity: 0.7 });
+    const frameMaterial = new THREE.LineBasicMaterial({ color: '#3b6299', transparent: true, opacity: 0.7 });
 
     const textureLoader = hasPhotos ? new THREE.TextureLoader() : null;
     const planeGeometry = new THREE.PlaneGeometry(planeWidth, planeHeight);
@@ -73,7 +73,7 @@ function VenueTour3D({ photos = [] }) {
         if ('colorSpace' in texture) texture.colorSpace = THREE.SRGBColorSpace;
         material = new THREE.MeshBasicMaterial({ map: texture });
       } else {
-        material = new THREE.MeshBasicMaterial({ color: '#f5efe9', transparent: true, opacity: 0.5 });
+        material = new THREE.MeshBasicMaterial({ color: '#eef3f8', transparent: true, opacity: 0.5 });
       }
 
       const plane = new THREE.Mesh(planeGeometry, material);

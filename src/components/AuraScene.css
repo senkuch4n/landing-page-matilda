@@ -5,9 +5,9 @@
   background: #ffffff;
   background-image: radial-gradient(
     circle at 62% 48%,
-    rgba(156, 123, 123, 0.22) 0%,
-    rgba(180, 150, 140, 0.14) 30%,
-    rgba(220, 200, 190, 0.08) 55%,
+    rgba(59, 98, 153, 0.22) 0%,
+    rgba(90, 130, 170, 0.14) 30%,
+    rgba(180, 205, 225, 0.08) 55%,
     rgba(255, 255, 255, 0) 75%
   );
 }

@@ -26,15 +26,15 @@ function buildDiscoBallCloud(noise3D) {
   const colors = new Float32Array(COUNT * 3);
   const seeds = new Float32Array(COUNT);
 
-  const colorGroove = new THREE.Color('#3f3c40'); // ranura oscura entre espejos
-  const colorDark = new THREE.Color('#847e83'); // faceta en sombra
-  const colorMid = new THREE.Color('#c2bdbd'); // faceta plateada
+  const colorGroove = new THREE.Color('#2e3c48'); // ranura oscura entre espejos
+  const colorDark = new THREE.Color('#7c8a99'); // faceta en sombra
+  const colorMid = new THREE.Color('#c7d3dd'); // faceta plateada
   // Destellos de color, como reflejos de las luces de la fiesta —
   // blanco puro se pierde contra el fondo claro del sitio.
   const glintColors = [
     new THREE.Color('#ffffff'),
     new THREE.Color('#c9a962'), // dorado
-    new THREE.Color('#7c5f5f'), // mauve oscuro
+    new THREE.Color('#164a7e'), // azul marino oscuro
   ];
 
   // "Foco" virtual que ilumina una zona de la bola, como en una fiesta real.
@@ -170,7 +170,7 @@ function AuraScene() {
     const starMaterial = new THREE.PointsMaterial({
       size: 0.045,
       map: dotTexture,
-      color: '#b9a29c',
+      color: '#9db3c7',
       transparent: true,
       opacity: 0.55,
       depthWrite: false,
@@ -183,7 +183,7 @@ function AuraScene() {
     const ringGroup = new THREE.Group();
     ringGroup.position.set(2.2, -0.2, -2);
     const ringMaterial = new THREE.LineDashedMaterial({
-      color: '#9c7b7b',
+      color: '#3b6299',
       transparent: true,
       opacity: 0.3,
       dashSize: 0.05,
