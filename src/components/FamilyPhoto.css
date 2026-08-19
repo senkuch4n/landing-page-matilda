@@ -6,7 +6,7 @@
   object-fit: cover;
   opacity: 0.5;
   border: 6px solid #fff;
-  box-shadow: 0 24px 40px -22px rgba(28, 20, 18, 0.4);
+  box-shadow: 0 24px 40px -22px rgba(20, 40, 63, 0.4);
   transform: rotate(var(--photo-rotate, -6deg));
   pointer-events: none;
   transition: opacity 0.4s ease;

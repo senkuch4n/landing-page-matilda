@@ -8,24 +8,25 @@
   --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-mono: 'Montserrat', Helvetica, Arial, sans-serif;
 
-  /* Paleta clara, inspirada en la tarjeta digital de referencia:
-     fondo blanco/crema, texto oscuro, acento rosa mauve. */
+  /* Paleta clara, inspirada en la tarjeta "colores-oficiales" (save the
+     date Matilda Ibiza): fondo blanco/celeste, texto azul marino oscuro,
+     acento azul. */
   --color-bg: #ffffff;
-  --color-bg-alt: #f5efe9;
+  --color-bg-alt: #eef3f8;
   --color-surface: rgba(255, 255, 255, 0.72);
-  --color-surface-border: rgba(28, 20, 18, 0.12);
-  --color-text: #1c1412;
+  --color-surface-border: rgba(20, 40, 63, 0.12);
+  --color-text: #14283f;
   /* Sólidos (no rgba con alpha): un color translúcido se mezcla con lo que
      haya detrás -incluida la escena WebGL animada- y pierde contraste,
      sobre todo en pantallas chicas. Estos valores ya están calculados
-     para dar buen contraste sobre blanco y sobre el crema de las
+     para dar buen contraste sobre blanco y sobre el celeste de las
      secciones "flat". */
-  --color-text-muted: #5b4f4b;
-  --color-text-faint: #6e615c;
-  --color-accent: #9c7b7b;
-  --color-accent-dark: #7c5f5f;
-  --color-accent-light: #e7d6d3;
-  --color-divider: #e6e8e1;
+  --color-text-muted: #3d5a78;
+  --color-text-faint: #5b7a97;
+  --color-accent: #3b6299;
+  --color-accent-dark: #164a7e;
+  --color-accent-light: #c1d2e0;
+  --color-divider: #dbe6ee;
 
   color-scheme: light;
   font-synthesis: none;

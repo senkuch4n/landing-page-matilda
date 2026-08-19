@@ -22,7 +22,7 @@
 
 .song-search__input:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 6px 16px -8px rgba(156, 123, 123, 0.5);
+  box-shadow: 0 6px 16px -8px rgba(59, 98, 153, 0.5);
 }
 
 .song-search__results {
@@ -38,7 +38,7 @@
   flex-direction: column;
   gap: 4px;
   background: #ffffff;
-  box-shadow: 0 12px 30px -12px rgba(28, 20, 18, 0.25);
+  box-shadow: 0 12px 30px -12px rgba(20, 40, 63, 0.25);
 }
 
 .song-search__hint {
