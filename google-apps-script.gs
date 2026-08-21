@@ -1,7 +1,7 @@
 /**
  * Script para recibir las confirmaciones de la invitación en una Google
- * Sheet. Agrega una fila por invitado (fecha, nombre, DNI, requerimiento
- * alimentario, canción sugerida, link de la canción).
+ * Sheet. Agrega una fila por invitado (fecha, nombre, DNI, mayor/menor de
+ * edad, requerimiento alimentario, canción sugerida, link de la canción).
  *
  * CÓMO USARLO (primera vez):
  * 1. Creá una Google Sheet nueva (podés ponerle título "Invitados M15").
@@ -23,7 +23,7 @@
  *     tome la variable nueva.
  *
  * CÓMO ACTUALIZAR EL CÓDIGO SI YA LO TENÉS PUBLICADO (como ahora, que
- * se agregó la columna del link):
+ * se agregó la columna de mayor/menor de edad):
  * 1. Abrí tu Google Sheet > Extensiones > Apps Script.
  * 2. Reemplazá todo el código por el de este archivo (el de acá abajo).
  * 3. Guardá.
@@ -44,6 +44,7 @@ function doPost(e) {
       timestamp,
       guest.fullName || '',
       guest.dni || '',
+      guest.ageGroup || '',
       guest.dietary || '',
       guest.song || '',
       guest.songLink || '',

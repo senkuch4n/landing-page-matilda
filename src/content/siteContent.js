@@ -79,6 +79,10 @@ const siteContent = {
     fields: {
       name: { label: 'Nombre y apellido', placeholder: 'Nombre y apellido' },
       dni: { label: 'DNI', placeholder: 'Número de DNI' },
+      ageGroup: {
+        label: 'Mayor o menor de edad',
+        options: ['Mayor de edad', 'Menor de edad'],
+      },
       dietary: {
         label: 'Requerimiento alimentario',
         options: ['Ninguno', 'Vegetariano', 'Vegano', 'Celíaco / sin TACC', 'Otro'],
