@@ -11,7 +11,7 @@
   animation: header-fade 1s ease both;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, rgba(21, 56, 96, 0.55) 0%, rgba(21, 56, 96, 0.25) 70%, rgba(21, 56, 96, 0) 100%);
 }
 
 @keyframes header-fade {
@@ -40,7 +40,7 @@
 .site-header__reg {
   font-size: 10px;
   margin-left: 2px;
-  color: var(--color-accent-dark);
+  color: var(--color-text-muted);
 }
 
 .site-header__tagline {

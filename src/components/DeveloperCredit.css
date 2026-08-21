@@ -86,7 +86,7 @@
 }
 
 .credit__link:hover {
-  color: var(--color-accent-dark);
+  color: var(--color-glacier);
 }
 
 .credit__link:hover::after {

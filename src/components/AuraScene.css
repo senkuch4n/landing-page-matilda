@@ -1,15 +1,15 @@
+/* Fondo del sitio: degradado azul oficial (Save the Date Matilda Ibiza).
+   Azul Océano domina el centro; Celeste Glaciar aclara la esquina
+   inferior derecha y el borde superior izquierdo, con un toque de
+   Blanco Puro en el núcleo de esas luces para dar más luminosidad. */
 .aura-scene {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: #ffffff;
-  background-image: radial-gradient(
-    circle at 62% 48%,
-    rgba(59, 98, 153, 0.22) 0%,
-    rgba(90, 130, 170, 0.14) 30%,
-    rgba(180, 205, 225, 0.08) 55%,
-    rgba(255, 255, 255, 0) 75%
-  );
+  background: #3b73a8;
+  background-image: radial-gradient(circle at 6% 2%, rgba(255, 255, 255, 0.5) 0%, rgba(144, 187, 219, 0.45) 20%, rgba(144, 187, 219, 0) 46%),
+    radial-gradient(circle at 92% 96%, rgba(255, 255, 255, 0.55) 0%, rgba(144, 187, 219, 0.55) 22%, rgba(144, 187, 219, 0) 52%),
+    linear-gradient(155deg, #2e5c86 0%, #3b73a8 45%, #3b73a8 65%, #4d81b3 100%);
 }
 
 .aura-scene canvas {

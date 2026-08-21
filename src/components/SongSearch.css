@@ -22,9 +22,11 @@
 
 .song-search__input:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 6px 16px -8px rgba(59, 98, 153, 0.5);
+  box-shadow: 0 6px 16px -8px rgba(59, 115, 168, 0.5);
 }
 
+/* Fondo blanco opaco a propósito (para que las miniaturas se vean bien),
+   así que el texto de adentro usa --color-ink en vez del blanco del sitio. */
 .song-search__results {
   position: absolute;
   z-index: 6;
@@ -38,14 +40,14 @@
   flex-direction: column;
   gap: 4px;
   background: #ffffff;
-  box-shadow: 0 12px 30px -12px rgba(20, 40, 63, 0.25);
+  box-shadow: 0 12px 30px -12px rgba(21, 56, 96, 0.35);
 }
 
 .song-search__hint {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.05em;
-  color: var(--color-text-muted);
+  color: var(--color-ink);
   padding: 10px;
   margin: 0;
 }
@@ -84,7 +86,7 @@
 .song-search__result-title {
   font-family: var(--font-sans);
   font-size: 13px;
-  color: var(--color-text);
+  color: var(--color-ink);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -94,7 +96,8 @@
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.05em;
-  color: var(--color-text-muted);
+  color: var(--color-navy);
+  opacity: 0.75;
 }
 
 .song-search__fallback {
@@ -117,8 +120,8 @@
 }
 
 .song-search__fallback-link:hover {
-  color: var(--color-accent-dark);
-  border-color: var(--color-accent-dark);
+  color: var(--color-text);
+  border-color: var(--color-text);
 }
 
 .song-search__fallback-link.is-disabled {

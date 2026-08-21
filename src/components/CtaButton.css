@@ -21,10 +21,12 @@
   align-items: center;
 }
 
-/* Primary: filled mauve button with white text */
+/* Primary: filled white button with navy text (arte lineal aplicado como
+   tipografía sólida sobre un chip claro, para contraste alto sobre el
+   fondo azul). */
 .cta-button--primary {
-  background: var(--color-accent);
-  color: #ffffff;
+  background: var(--color-white);
+  color: var(--color-navy);
   padding-right: 56px;
 }
 
@@ -37,8 +39,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-accent-dark);
-  color: #ffffff;
+  background: var(--color-glacier);
+  color: var(--color-navy);
   font-size: 14px;
 }
 
@@ -49,7 +51,7 @@
 }
 
 .cta-button:hover .hud-corner {
-  border-color: var(--color-accent-dark);
+  border-color: var(--color-glacier);
 }
 
 .cta-button:disabled {
