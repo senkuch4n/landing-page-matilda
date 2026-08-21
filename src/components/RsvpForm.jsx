@@ -11,7 +11,7 @@ function makeId() {
 }
 
 function makeGuest() {
-  return { id: makeId(), fullName: '', dni: '', dietary: '', song: '', songLink: '' };
+  return { id: makeId(), fullName: '', dni: '', ageGroup: '', dietary: '', song: '', songLink: '' };
 }
 
 const SHEETS_URL = import.meta.env.VITE_GOOGLE_SHEETS_URL;
@@ -138,6 +138,27 @@ function RsvpForm({ content, songSearch, familyPhotoSrc }) {
                     value={guest.dni}
                     onChange={(e) => updateGuest(guest.id, 'dni', e.target.value)}
                   />
+                </div>
+
+                <div className="rsvp__field">
+                  <label className="rsvp__label" htmlFor={`rsvp-agegroup-${guest.id}`}>
+                    {content.fields.ageGroup.label}
+                  </label>
+                  <select
+                    id={`rsvp-agegroup-${guest.id}`}
+                    className="rsvp__select"
+                    value={guest.ageGroup}
+                    onChange={(e) => updateGuest(guest.id, 'ageGroup', e.target.value)}
+                  >
+                    <option value="" disabled>
+                      Elegí una opción
+                    </option>
+                    {content.fields.ageGroup.options.map((opt) => (
+                      <option value={opt} key={opt}>
+                        {opt}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 <div className="rsvp__field">
