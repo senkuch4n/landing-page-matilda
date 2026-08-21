@@ -8,25 +8,34 @@
   --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-mono: 'Montserrat', Helvetica, Arial, sans-serif;
 
-  /* Paleta clara, inspirada en la tarjeta "colores-oficiales" (save the
-     date Matilda Ibiza): fondo blanco/celeste, texto azul marino oscuro,
-     acento azul. */
-  --color-bg: #ffffff;
-  --color-bg-alt: #eef3f8;
-  --color-surface: rgba(255, 255, 255, 0.72);
-  --color-surface-border: rgba(20, 40, 63, 0.12);
-  --color-text: #14283f;
-  /* Sólidos (no rgba con alpha): un color translúcido se mezcla con lo que
-     haya detrás -incluida la escena WebGL animada- y pierde contraste,
-     sobre todo en pantallas chicas. Estos valores ya están calculados
-     para dar buen contraste sobre blanco y sobre el celeste de las
-     secciones "flat". */
-  --color-text-muted: #3d5a78;
-  --color-text-faint: #5b7a97;
-  --color-accent: #3b6299;
-  --color-accent-dark: #164a7e;
-  --color-accent-light: #c1d2e0;
-  --color-divider: #dbe6ee;
+  /* Paleta oficial "Save the Date Matilda Ibiza": fondo con degradado azul
+     (Océano dominante, Glaciar en las esquinas), tipografía blanca y arte
+     lineal en Azul Marino. */
+  --color-white: #ffffff;
+  --color-navy: #153860;
+  --color-ocean: #3b73a8;
+  --color-glacier: #90bbd9;
+
+  --color-bg: var(--color-ocean);
+  /* Franja translúcida para alternar ritmo visual entre secciones, sin
+     salirse de la paleta (Océano/Glaciar), ver .flat-section. */
+  --color-bg-alt: rgba(59, 115, 168, 0.28);
+  /* Paneles de vidrio esmerilado: Océano más saturado/opaco que el fondo,
+     para que el texto blanco mantenga buen contraste encima. */
+  --color-surface: rgba(43, 90, 133, 0.55);
+  --color-surface-border: rgba(255, 255, 255, 0.3);
+  --color-text: var(--color-white);
+  /* Variantes translúcidas del blanco puro (no colores nuevos) para dar
+     jerarquía sin salir de "toda la tipografía en blanco". */
+  --color-text-muted: rgba(255, 255, 255, 0.82);
+  --color-text-faint: rgba(255, 255, 255, 0.6);
+  --color-accent: var(--color-glacier);
+  --color-accent-dark: var(--color-navy);
+  --color-accent-light: rgba(144, 187, 217, 0.4);
+  --color-divider: rgba(255, 255, 255, 0.24);
+  /* Texto oscuro reservado para superficies claras nativas (dropdown del
+     <select>, resultados de búsqueda con fondo blanco opaco). */
+  --color-ink: var(--color-navy);
 
   color-scheme: light;
   font-synthesis: none;
@@ -41,7 +50,7 @@
 
 body {
   margin: 0;
-  background: var(--color-bg);
+  background: linear-gradient(160deg, var(--color-ocean) 0%, var(--color-ocean) 58%, var(--color-glacier) 88%, var(--color-white) 100%);
   color: var(--color-text);
   font-family: var(--font-sans);
   font-weight: 300;

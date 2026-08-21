@@ -17,19 +17,19 @@
 .hud-corner--tl {
   top: -6px;
   left: -6px;
-  border-top: 1px solid rgba(20, 40, 63, 0.55);
-  border-left: 1px solid rgba(20, 40, 63, 0.55);
+  border-top: 1px solid rgba(255, 255, 255, 0.55);
+  border-left: 1px solid rgba(255, 255, 255, 0.55);
 }
 
 .hud-corner--br {
   bottom: -6px;
   right: -6px;
-  border-bottom: 1px solid rgba(20, 40, 63, 0.55);
-  border-right: 1px solid rgba(20, 40, 63, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  border-right: 1px solid rgba(255, 255, 255, 0.55);
 }
 
 .hud-corners--dim .hud-corner {
-  border-color: rgba(20, 40, 63, 0.25);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .hud-panel {
@@ -48,7 +48,7 @@
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-accent-dark);
+  color: var(--color-text);
 }
 
 .hud-kicker::before {
@@ -67,11 +67,11 @@
   margin: 0;
 }
 
-/* Secciones de fondo plano: tapan la escena WebGL fija detrás para
-   alternar ritmo visual con las secciones "animadas" (hero, venue). */
+/* Secciones de fondo plano: una franja translúcida sobre el degradado fijo
+   de fondo, para alternar ritmo visual con las secciones "animadas". */
 .flat-section {
   position: relative;
-  background: linear-gradient(180deg, #f4f8fb 0%, #e7eff5 100%);
+  background: linear-gradient(180deg, var(--color-bg-alt) 0%, rgba(21, 56, 96, 0.4) 100%);
   border-top: 1px solid var(--color-divider);
   border-bottom: 1px solid var(--color-divider);
 }

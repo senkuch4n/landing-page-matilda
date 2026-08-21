@@ -32,7 +32,7 @@
 }
 
 .site-footer__link:hover {
-  color: var(--color-accent-dark);
+  color: var(--color-text);
 }
 
 @media (max-width: 720px) {

@@ -84,9 +84,9 @@
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: capitalize;
-  color: white;
+  color: var(--color-white);
   margin: 0;
-  background-color: var(--color-accent);
+  background-color: var(--color-navy);
   padding: .5rem;
 }
 
